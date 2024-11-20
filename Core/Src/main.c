@@ -105,7 +105,7 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim8);
-  example_init(vis_recv_buff);
+  example_init(vis_recv_buff);//注册usb样例
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -116,9 +116,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     float b[2]={1.1,2};
-    USB_Data_Send((uint8_t*)b,8);
-    DaemonTask();
-    MY_Delay_ms(1);
+    USB_Data_Send((uint8_t*)b,8);//测试1000hz发送,无意义
+    DaemonTask();//守护线程
+    MY_Delay_ms(1);//自定义延时,不会有人用HAL_Delay吧()
   }
   /* USER CODE END 3 */
 }
