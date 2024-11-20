@@ -83,7 +83,10 @@
           "test/daemon",
           "test/clock",
           "test/timer",
-          "test/usart"
+          "test/usart",
+          "Middlewares/Third_Party/SEGGER/Config",
+          "Middlewares/Third_Party/SEGGER/RTT",
+          "test/log"
         ],
         "libList": [],
         "defineList": [

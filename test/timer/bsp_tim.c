@@ -1,7 +1,6 @@
 #include "bsp_tim.h"
 extern TIM_HandleTypeDef htim2,htim3,htim4,htim8;
 Clock_ Clock;
-int k = 0;
 static float CPU_FREQ_Hz_us=1000;
 static float CPU_FREQ_Hz_ms=1;
 

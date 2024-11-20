@@ -32,6 +32,7 @@
 #include "daemon.h"
 #include "bsp_tim.h"
 #include "bsp_usart.h"
+#include "bsp_log.h"
 // #include "master_process.h"
 /* USER CODE END Includes */
 
@@ -118,6 +119,7 @@ int main(void)
     float b[2]={1.1,2};
     USB_Data_Send((uint8_t*)b,8);//测试1000hz发送,无意义
     DaemonTask();//守护线程
+    // LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
     MY_Delay_ms(1);//自定义延时,不会有人用HAL_Delay吧()
   }
   /* USER CODE END 3 */

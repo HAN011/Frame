@@ -52,11 +52,12 @@ void USBOfflineCallback()
 static uint8_t *USB_Init(USB_Init_Config_s conf)
 {
     if (reg_flag == 1) {//已经注册了一个实例
-    //todo:打印错误日志
+    //打印错误日志
+    while (1) LOGERROR("[bsp_usb]You cant register more instance for usb.");
     }
     bsp_usb_rx_buffer = CDCInitRxbufferNcallback(conf.tx_cbk, conf.rx_cbk); // 获取接收数据指针
     reg_flag=1;
-
+    LOGINFO("USB init success");
     Daemon_Init_Config_s daemon_conf = {
         .callback     = USBOfflineCallback, // 离线时调用的回调函数,会重启串口接收
         .owner_id     = NULL,
