@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "usbd_cdc_if.h"
+#include "usb.h"
+#include "daemon.h"
 #define PROTOCOL_CMD_ID 0XA5
 #define OFFSET_BYTE     8 // 出数据段外，其他部分所占字节数
 typedef struct

@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "master_process.h": "c",
+            "usbd_cdc_if.h": "c",
+            "bsp_usb.h": "c",
+            "usb.h": "c",
+            "compare": "c"
+        }
+    },
+    "extensions": {}
+}

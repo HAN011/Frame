@@ -33,7 +33,21 @@
 static uint8_t reg_flag = 0;   // 注册标识符，保证板子只注册一个USB实例，多了就报错
 static uint8_t *bsp_usb_rx_buffer; // 接收到的原始数据会被放在这里
 uint8_t test_receive_data[10]={};
+static DaemonInstance *vision_daemon_instance;
 // 注意usb单个数据包(Full speed模式下)最大为64byte,超出可能会出现丢包情况
+static void USBRefresh()
+{
+    // 重新枚举usb设备
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+    HAL_Delay(0.1);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
+    HAL_Delay(0.1);
+}
+
+void USBOfflineCallback()
+{
+    // USBRefresh();
+}
 
 static uint8_t *USB_Init(USB_Init_Config_s conf)
 {
@@ -42,6 +56,14 @@ static uint8_t *USB_Init(USB_Init_Config_s conf)
     }
     bsp_usb_rx_buffer = CDCInitRxbufferNcallback(conf.tx_cbk, conf.rx_cbk); // 获取接收数据指针
     reg_flag=1;
+
+    Daemon_Init_Config_s daemon_conf = {
+        .callback     = USBOfflineCallback, // 离线时调用的回调函数,会重启串口接收
+        .owner_id     = NULL,
+        .reload_count = 10,
+    };
+    vision_daemon_instance = DaemonRegister(&daemon_conf);
+
     return bsp_usb_rx_buffer;
 }
 /*检验CRC8数据段*/
@@ -95,11 +117,13 @@ static void USB_Data_Process(uint8_t *rx_buf, uint8_t *rx_data)
 }
 
 uint8_t USB_Data_Send(uint8_t *Buf, uint16_t Len){
+    DaemonReload(vision_daemon_instance); // 喂狗
     return CDC_Transmit_FS(Buf, Len);
 }
 
 static void USB_Data_Decode(uint32_t recv_len)
 {
+    DaemonReload(vision_daemon_instance); // 喂狗
     USB_Data_Process(bsp_usb_rx_buffer, test_receive_data);
 }
 

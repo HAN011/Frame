@@ -1,0 +1,62 @@
+
+
+GraphedExpression="a", DisplayFormat=DISPLAY_FORMAT_DEC, Color=#e56a6f
+GraphedExpression="(CAN_DATA_DELIVER).Current_Speed", Color=#35792b
+GraphedExpression="(CAN_DATA_LEFT).Current_Speed", Color=#769dda
+GraphedExpression="(CAN_DATA_RIGHT).Current_Speed", Color=#b14f0d
+GraphedExpression="erro", Color=#b3c38e
+OpenDocument="stm32f4xx_hal_can.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c", Line=1771
+OpenDocument="main.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Core/Src/main.c", Line=66
+OpenDocument="stm32f4xx_hal.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c", Line=316
+OpenDocument="bsp_flash.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/bsp_flash/bsp_flash.c", Line=24
+OpenDocument="tjc_usart_hmi.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/USART HMI/tjc_usart_hmi.c", Line=26
+OpenDocument="remote_control.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/remote_control/remote_control.c", Line=23
+OpenDocument="stm32f4xx_hal_uart.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c", Line=1320
+OpenDocument="startup_stm32f427iihx.s", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Core/Startup/startup_stm32f427iihx.s", Line=52
+OpenDocument="stm32f4xx_it.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Core/Src/stm32f4xx_it.c", Line=90
+OpenDocument="mode.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/mode/mode.c", Line=159
+OpenDocument="bsp_can.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/bsp_can/bsp_can.c", Line=83
+OpenDocument="pid.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/pid/pid.c", Line=0
+OpenDocument="bsp_tim.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/bsp_tim/bsp_tim.c", Line=38
+OpenDocument="motor_control.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/motor_control/motor_control.c", Line=62
+OpenDocument="stm32f4xx_hal_gpio.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c", Line=365
+OpenDocument="stepper.c", FilePath="d:/data/STM32CubeMx_data/RoboMaster_DART/Modules/stepper/stepper.c", Line=6
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=0, w=846, h=354, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=1, w=785, h=229, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=846, h=513, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=1, w=785, h=229, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
+OpenWindow="Watched Data 1", DockArea=LEFT, x=0, y=0, w=785, h=418, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=2, w=785, h=195, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=1, UniformSampleSpacing=0
+OpenWindow="Timeline", DockArea=BOTTOM, x=0, y=0, w=2880, h=708, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=1, DataPaneShown=1, PowerPaneShown=0, CodePaneShown=0, PinCursor="Cursor Movable", TimePerDiv="200 ms / Div", TimeStampFormat="Time", DataGraphDrawAsPoints=0, DataGraphLegendShown=1, DataGraphUniformSampleSpacing=0, DataGraphLegendPosition="97;356", DataGraphShowNamesAtCursor=0, PowerGraphDrawAsPoints=0, PowerGraphLegendShown=0, PowerGraphAvgFilterTime=Off, PowerGraphAvgFilterLen=Off, PowerGraphUniformSampleSpacing=0, PowerGraphLegendPosition="2582;-91", CodeGraphLegendShown=0, CodeGraphLegendPosition="2605;0"
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Source Files", SortCol="File", SortOrder="ASCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[306;116;100;116;1125]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Stack Frame";"Source";"PC";"Return Address";"Stack Used"], ColWidths=[542;183;135;131;300;134]
+TableHeader="Data Sampling Setup", SortCol="Value", SortOrder="ASCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[366;196;105;100;100;127;149;171;171]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";" a";" (CAN_DATA_DELIVER).Current_Speed";" (CAN_DATA_LEFT).Current_Speed";" (CAN_DATA_RIGHT).Current_Speed";" erro"], ColWidths=[100;100;100;100;100;100;151]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[267;248;803;101]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="Vector Catches", SortCol="", SortOrder="ASCENDING", VisibleCols=["";"Vector Catch";"Description"], ColWidths=[50;300;500]
+TableHeader="Break & Tracepoints", SortCol="Location", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[100;100;138;447]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[262;150;158;2038]
+WatchedExpression="a", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_LEFT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="hcan1", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="DBUS", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="htim8", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CurrentPeriod", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="circle_number", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_DELIVER", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="refresh_flag", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="stop_flag", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="shoot_nmuber", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="htim3", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_RIGHT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="erro", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="PID_LEFT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="RxBuff", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="ringBuff", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="outpost_speed", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="base_speed", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="PID_RIGHT", RefreshRate=5, Window=Watched Data 1
