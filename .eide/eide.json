@@ -82,7 +82,8 @@
           "test/crc",
           "test/daemon",
           "test/clock",
-          "test/timer"
+          "test/timer",
+          "test/usart"
         ],
         "libList": [],
         "defineList": [

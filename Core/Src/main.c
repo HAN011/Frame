@@ -31,6 +31,7 @@
 #include "usb.h"
 #include "daemon.h"
 #include "bsp_tim.h"
+#include "bsp_usart.h"
 // #include "master_process.h"
 /* USER CODE END Includes */
 
@@ -105,7 +106,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim8);
   example_init(vis_recv_buff);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

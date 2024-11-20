@@ -1,9 +1,5 @@
 #include "daemon.h"
-// #include "bsp_dwt.h" // 后续通过定时器来计时?
 #include "stdlib.h"
-// #include "memory.h"
-// #include "buzzer.h"
-
 // 用于保存所有的daemon instance
 static DaemonInstance *daemon_instances[DAEMON_MX_CNT] = {NULL};
 static uint8_t idx = 0; // 用于记录当前的daemon instance数量,配合回调使用
