@@ -86,7 +86,8 @@
           "test/usart",
           "Middlewares/Third_Party/SEGGER/Config",
           "Middlewares/Third_Party/SEGGER/RTT",
-          "test/log"
+          "test/log",
+          "test/dwt"
         ],
         "libList": [],
         "defineList": [

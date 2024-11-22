@@ -1,22 +1,35 @@
 
 
-OpenDocument="stm32f4xx_it.c", FilePath="d:/rc/2024DART-master/Core/Src/stm32f4xx_it.c", Line=86
-OpenDocument="stm32f4xx_hal.c", FilePath="d:/rc/2024DART-master/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c", Line=319
-OpenDocument="", FilePath="", Line=0
-OpenDocument="main.c", FilePath="d:/rc/2024DART-master/Core/Src/main.c", Line=74
+
+
+Breakpoint=d:/rc/2024DART-master/test/usart/bsp_usart.c:122, State=BP_STATE_ON
+GraphedExpression="(Clock).CNT", DisplayFormat=DISPLAY_FORMAT_DEC, Color=#e56a6f
+OpenDocument="main.c", FilePath="d:/rc/2024DART-master/Core/Src/main.c", Line=0
 OpenToolbar="View", Floating=0, x=0, y=0
 OpenToolbar="Debug", Floating=0, x=1, y=0
-OpenWindow="Source Files", DockArea=LEFT, x=0, y=1, w=589, h=495, TabPos=0, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Global Data", DockArea=LEFT, x=0, y=0, w=589, h=232, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Watched Data 1", DockArea=FLOATING, x=1100, y=443, w=1339, h=585, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
-OpenWindow="Power Sampling", DockArea=BOTTOM, x=0, y=0, w=1707, h=227, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, UniformSampleSpacing=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=5, w=731, h=97, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=208, h=549, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Global Data", DockArea=LEFT, x=0, y=6, w=731, h=97, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=1, w=731, h=97, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Call Graph", DockArea=LEFT, x=0, y=2, w=731, h=102, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory Usage", DockArea=LEFT, x=0, y=4, w=731, h=97, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Code Profile", DockArea=LEFT, x=0, y=3, w=731, h=131, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, GroupByFiles=0, SortRespectsFilters=0, ParentRelativeLoad=0
+OpenWindow="Instruction Trace", DockArea=LEFT, x=0, y=0, w=731, h=101, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Data Sampling", DockArea=FLOATING, x=1695, y=272, w=638, h=700, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+OpenWindow="Power Sampling", DockArea=BOTTOM, x=1, y=0, w=683, h=227, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, UniformSampleSpacing=0
+OpenWindow="Timeline", DockArea=FLOATING, x=1152, y=449, w=1237, h=689, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=1, DataPaneShown=1, PowerPaneShown=0, CodePaneShown=0, PinCursor="Cursor Movable", TimePerDiv="1 s / Div", TimeStampFormat="Time", DataGraphDrawAsPoints=0, DataGraphLegendShown=1, DataGraphUniformSampleSpacing=0, DataGraphLegendPosition="809;471", DataGraphShowNamesAtCursor=0, PowerGraphDrawAsPoints=0, PowerGraphLegendShown=0, PowerGraphAvgFilterTime=Off, PowerGraphAvgFilterLen=Off, PowerGraphUniformSampleSpacing=0, PowerGraphLegendPosition="70;20", CodeGraphLegendShown=0, CodeGraphLegendPosition="80;20"
+OpenWindow="Find Results", DockArea=RIGHT, x=0, y=1, w=208, h=178, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Console", DockArea=BOTTOM, x=0, y=0, w=1023, h=227, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
 SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
-TableHeader="Global Data", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Location";"Size";"Type";"Scope"], ColWidths=[100;100;121;100;100;100]
+TableHeader="Global Data", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Location";"Size";"Type";"Scope"], ColWidths=[100;100;121;100;100;542]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1236;100;100;100;374]
 TableHeader="Source Files", SortCol="File", SortOrder="DESCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[204;100;100;100;1502]
-TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;1507]
-TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh";"Type"], ColWidths=[384;686;170;100;420]
+TableHeader="Code Profile", SortCol="File / Function", SortOrder="ASCENDING", VisibleCols=["File / Function";"Source Coverage";"Inst. Coverage";"Run Count";"Fetch Count";"Load"], ColWidths=[1374;115;125;100;100;125]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";" (Clock).CNT"], ColWidths=[100;100;100]
+TableHeader="Data Sampling Setup", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[218;196;100;100;100;109;133;157;157]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;824]
 TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
-TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;344]
+TableHeader="Call Graph", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Stack Total";"Stack Local";"Code Total";"Code Local";"Depth";"Called From"], ColWidths=[510;100;100;100;100;100;157]
 WatchedExpression="rx_buf", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
 WatchedExpression="pro", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
 WatchedExpression="ucExpected", RefreshRate=5, DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
@@ -44,3 +57,11 @@ WatchedExpression="*(uint8_t *)(0x2002FFF0+1)", DisplayFormat=DISPLAY_FORMAT_HEX
 WatchedExpression="*(uint8_t *)(0x2002FFF0+2)", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
 WatchedExpression="*(uint8_t *)(0x2002FFF0+3)", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
 WatchedExpression="*(uint8_t *)(0x2002FFF0+4)", DisplayFormat=DISPLAY_FORMAT_HEX, Window=Watched Data 1
+WatchedExpression="htim8", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="Clock", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="test_receive_data", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="i", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="vision_daemon_instance", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="rc_data", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="huart", Window=Watched Data 1
+WatchedExpression="rc_daemon_instance", RefreshRate=5, Window=Watched Data 1

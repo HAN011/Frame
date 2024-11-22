@@ -30,9 +30,9 @@
 #include "usbd_cdc_if.h"
 #include "usb.h"
 #include "daemon.h"
-#include "bsp_tim.h"
 #include "bsp_usart.h"
 #include "bsp_log.h"
+#include "bsp_dwt.h"
 // #include "master_process.h"
 /* USER CODE END Includes */
 
@@ -105,8 +105,9 @@ int main(void)
   MX_USART6_UART_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim8);
+  DWT_Init(168);
   example_init(vis_recv_buff);//注册usb样例
+  BSPLogInit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,8 +120,8 @@ int main(void)
     float b[2]={1.1,2};
     USB_Data_Send((uint8_t*)b,8);//测试1000hz发送,无意义
     DaemonTask();//守护线程
-    // LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
-    MY_Delay_ms(1);//自定义延时,不会有人用HAL_Delay吧()
+    LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
+    DWT_Delay(0.001);//务必使用这个延时函数，丢弃HAL_Delay()
   }
   /* USER CODE END 3 */
 }

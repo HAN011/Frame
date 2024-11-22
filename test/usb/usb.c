@@ -30,6 +30,7 @@
 #include "crc16.h"
 #include "memory.h"
 #include "usbd_cdc_if.h"
+#include "bsp_log.h"
 static uint8_t reg_flag = 0;   // 注册标识符，保证板子只注册一个USB实例，多了就报错
 static uint8_t *bsp_usb_rx_buffer; // 接收到的原始数据会被放在这里
 uint8_t test_receive_data[10]={};
