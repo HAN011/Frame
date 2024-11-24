@@ -1,9 +1,9 @@
 /**
  * @file	bsp_dwt.c
  * @author  Wang Hongxi
- * @author modified by Neo with annotation
+ * @author modified by CenZihan with annotation
  * @version V1.1.0
- * @date    2022/3/8
+ * @date    2024/11/22
  * @brief
  */
 
@@ -28,8 +28,8 @@ static void DWT_CNT_Update(void)
 {
     /**
      *bit_locker
-     *一个位锁，防止中断中调用DWTGetDeltaT或DWTGetTimeline函数更新DWT维护的时间时打断任务中
-     *的相同函数导致计数被重复更新，或引起错误的DWT溢出检测。
+     *一个位锁，防止中断中调用DWTGetDeltaT或DWTGetTimeline函数更新DWT维护的时间时打断任务中的相同函数导致计数被重复更新，或引起错误的DWT溢出检测。
+     说人话就是防止
      */
     static volatile uint8_t bit_locker = 0;
     if (!bit_locker) {

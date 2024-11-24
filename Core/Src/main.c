@@ -33,13 +33,15 @@
 #include "bsp_usart.h"
 #include "bsp_log.h"
 #include "bsp_dwt.h"
+#include "dji_motor.h"
 // #include "master_process.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 uint8_t *vis_recv_buff;
-int i=0;
+int i = 0;
+static DJIMotorInstance *friction_l, *friction_r;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -104,10 +106,38 @@ int main(void)
   MX_TIM4_Init();
   MX_USART6_UART_Init();
   MX_USB_DEVICE_Init();
+  MX_CAN2_Init();
   /* USER CODE BEGIN 2 */
   DWT_Init(168);
   example_init(vis_recv_buff);//注册usb样例
   BSPLogInit();
+  Motor_Init_Config_s friction_config = {
+      .can_init_config = {
+          .can_handle = &hcan1,
+      },
+      .controller_param_init_config = {
+          .speed_PID = {
+              .Kp = 1.5, .Ki = 0, .Kd = 0.001, .Improve = PID_Integral_Limit | PID_OutputFilter, .IntegralLimit = 10000, .MaxOut = 20000, .Output_LPF_RC = 0.001,
+          },
+      },
+      .controller_setting_init_config = {
+          .angle_feedback_source = MOTOR_FEED,
+          .speed_feedback_source = MOTOR_FEED,
+
+          .outer_loop_type    = SPEED_LOOP,
+          .close_loop_type    = SPEED_LOOP,
+          .motor_reverse_flag = MOTOR_DIRECTION_NORMAL,
+      },
+      .motor_type = GM6020};
+  friction_config.can_init_config.tx_id = 1;
+  friction_l                            = DJIMotorInit(&friction_config);
+
+  friction_config.can_init_config.tx_id                             = 3; // 右摩擦轮,改txid和方向就行
+  friction_config.controller_setting_init_config.motor_reverse_flag = MOTOR_DIRECTION_REVERSE;
+  friction_r                                                        = DJIMotorInit(&friction_config);
+
+  DJIMotorEnable(friction_l);
+  DJIMotorEnable(friction_r);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,9 +148,12 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     float b[2]={1.1,2};
-    USB_Data_Send((uint8_t*)b,8);//测试1000hz发送,无意义
+    USB_Data_Send((uint8_t*)b,8);//测试1000hz发�??,无意�?
     DaemonTask();//守护线程
     LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
+    // DJIMotorSetRef(friction_l, 100); // 45000
+    // DJIMotorSetRef(friction_r, 0);
+    // DJIMotorControl();
     DWT_Delay(0.001);//务必使用这个延时函数，丢弃HAL_Delay()
   }
   /* USER CODE END 3 */

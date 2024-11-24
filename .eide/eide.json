@@ -9,7 +9,8 @@
     "USB_DEVICE",
     "Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
     "test",
-    "Modules"
+    "Modules",
+    "modules"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -87,7 +88,12 @@
           "Middlewares/Third_Party/SEGGER/Config",
           "Middlewares/Third_Party/SEGGER/RTT",
           "test/log",
-          "test/dwt"
+          "test/dwt",
+          "test/can",
+          "modules/DJImotor",
+          "modules/algorithm",
+          "modules",
+          "Middlewares/ST/ARM/DSP/Inc"
         ],
         "libList": [],
         "defineList": [

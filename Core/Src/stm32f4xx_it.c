@@ -57,10 +57,7 @@
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_OTG_FS;
 extern CAN_HandleTypeDef hcan1;
-extern TIM_HandleTypeDef htim2;
-extern TIM_HandleTypeDef htim3;
-extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim8;
+extern CAN_HandleTypeDef hcan2;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart6;
@@ -207,20 +204,6 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles CAN1 TX interrupts.
-  */
-void CAN1_TX_IRQHandler(void)
-{
-  /* USER CODE BEGIN CAN1_TX_IRQn 0 */
-
-  /* USER CODE END CAN1_TX_IRQn 0 */
-  HAL_CAN_IRQHandler(&hcan1);
-  /* USER CODE BEGIN CAN1_TX_IRQn 1 */
-
-  /* USER CODE END CAN1_TX_IRQn 1 */
-}
-
-/**
   * @brief This function handles CAN1 RX0 interrupts.
   */
 void CAN1_RX0_IRQHandler(void)
@@ -249,48 +232,6 @@ void CAN1_RX1_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM2 global interrupt.
-  */
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  /* USER CODE END TIM2_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM3 global interrupt.
-  */
-void TIM3_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM3_IRQn 0 */
-
-  /* USER CODE END TIM3_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim3);
-  /* USER CODE BEGIN TIM3_IRQn 1 */
-
-  /* USER CODE END TIM3_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM4 global interrupt.
-  */
-void TIM4_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM4_IRQn 0 */
-
-  /* USER CODE END TIM4_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim4);
-  /* USER CODE BEGIN TIM4_IRQn 1 */
-
-  /* USER CODE END TIM4_IRQn 1 */
-}
-
-/**
   * @brief This function handles USART1 global interrupt.
   */
 void USART1_IRQHandler(void)
@@ -305,17 +246,31 @@ void USART1_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM8 update interrupt and TIM13 global interrupt.
+  * @brief This function handles CAN2 RX0 interrupts.
   */
-void TIM8_UP_TIM13_IRQHandler(void)
+void CAN2_RX0_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM8_UP_TIM13_IRQn 0 */
+  /* USER CODE BEGIN CAN2_RX0_IRQn 0 */
 
-  /* USER CODE END TIM8_UP_TIM13_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim8);
-  /* USER CODE BEGIN TIM8_UP_TIM13_IRQn 1 */
+  /* USER CODE END CAN2_RX0_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan2);
+  /* USER CODE BEGIN CAN2_RX0_IRQn 1 */
 
-  /* USER CODE END TIM8_UP_TIM13_IRQn 1 */
+  /* USER CODE END CAN2_RX0_IRQn 1 */
+}
+
+/**
+  * @brief This function handles CAN2 RX1 interrupt.
+  */
+void CAN2_RX1_IRQHandler(void)
+{
+  /* USER CODE BEGIN CAN2_RX1_IRQn 0 */
+
+  /* USER CODE END CAN2_RX1_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan2);
+  /* USER CODE BEGIN CAN2_RX1_IRQn 1 */
+
+  /* USER CODE END CAN2_RX1_IRQn 1 */
 }
 
 /**
