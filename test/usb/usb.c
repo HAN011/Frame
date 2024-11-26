@@ -31,8 +31,17 @@
 #include "memory.h"
 #include "usbd_cdc_if.h"
 #include "bsp_log.h"
+#include "bsp_dwt.h"
+#include <stdint.h>
+#include <stdio.h>
+
+union {
+    uint8_t b[4];
+    float f;
+} data;
 static uint8_t reg_flag = 0;   // 注册标识符，保证板子只注册一个USB实例，多了就报错
 static uint8_t *bsp_usb_rx_buffer; // 接收到的原始数据会被放在这里
+static float cnt;
 uint8_t test_receive_data[10]={};
 static DaemonInstance *vision_daemon_instance;
 // 注意usb单个数据包(Full speed模式下)最大为64byte,超出可能会出现丢包情况
@@ -40,9 +49,9 @@ static void USBRefresh()
 {
     // 重新枚举usb设备
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
-    HAL_Delay(0.1);
+    DWT_Delay(0.1);
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
-    HAL_Delay(0.1);
+    DWT_Delay(0.1);
 }
 
 void USBOfflineCallback()
@@ -127,6 +136,13 @@ static void USB_Data_Decode(uint32_t recv_len)
 {
     DaemonReload(vision_daemon_instance); // 喂狗
     USB_Data_Process(bsp_usb_rx_buffer, test_receive_data);
+        // 假设输入字节序是大端（network byte order），需要转换为主机字节序
+        // 如果主机是小端，则需要反转字节
+        data.b[0] = test_receive_data[0];
+        data.b[1] = test_receive_data[1];
+        data.b[2] = test_receive_data[2];
+        data.b[3] = test_receive_data[3];
+        cnt+=1;
 }
 
 void example_init(uint8_t *vis_recv_buff)

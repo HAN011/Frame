@@ -147,10 +147,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    float b[2]={1.1,2};
-    USB_Data_Send((uint8_t*)b,8);//测试1000hz发�??,无意�?
+    float b[4]={1.2,2.3,3.4,4.5};
+    USB_Data_Send((uint8_t*)b,16);//测试1000hz发送，无意义
     DaemonTask();//守护线程
-    LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
+    // LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);
     // DJIMotorSetRef(friction_l, 100); // 45000
     // DJIMotorSetRef(friction_r, 0);
     // DJIMotorControl();

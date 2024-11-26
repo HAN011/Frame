@@ -93,7 +93,8 @@
           "modules/DJImotor",
           "modules/algorithm",
           "modules",
-          "Middlewares/ST/ARM/DSP/Inc"
+          "Middlewares/ST/ARM/DSP/Inc",
+          "modules/USB2CAN"
         ],
         "libList": [],
         "defineList": [

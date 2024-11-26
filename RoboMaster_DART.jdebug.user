@@ -1,0 +1,43 @@
+
+
+
+GraphedExpression="((friction_l)->measure).last_ecd", DisplayFormat=DISPLAY_FORMAT_DEC, Color=#e56a6f, Show=0
+OpenDocument="main.c", FilePath="d:/rc/2024DART-master/Core/Src/main.c", Line=74
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=0, w=400, h=402, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Source Files", DockArea=LEFT, x=0, y=0, w=711, h=509, TabPos=0, TopOfStack=0, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=1, w=400, h=553, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Break & Tracepoints", DockArea=LEFT, x=0, y=0, w=711, h=509, TabPos=1, TopOfStack=1, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VectorCatchIndexMask=0
+OpenWindow="Data Sampling", DockArea=LEFT, x=0, y=1, w=711, h=419, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, VisibleTab=0, UniformSampleSpacing=0
+SmartViewPlugin="", Page="", Toolbar="Hidden", Window="SmartView 1"
+TableHeader="Source Files", SortCol="File", SortOrder="ASCENDING", VisibleCols=["File";"Status";"Size";"#Insts";"Path"], ColWidths=[306;116;100;116;1502]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Stack Frame";"Source";"PC";"Return Address";"Stack Used"], ColWidths=[542;183;135;131;300;132]
+TableHeader="Data Sampling Table", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";" ((friction_l)->measure).last_ecd"], ColWidths=[100;100;511]
+TableHeader="Data Sampling Setup", SortCol="Value", SortOrder="ASCENDING", VisibleCols=["Expression";"Type";"Value";"Min";"Max";"Average";"# Changes";"Min. Change";"Max. Change"], ColWidths=[145;210;100;100;100;154;133;157;157]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;344]
+TableHeader="Vector Catches", SortCol="", SortOrder="ASCENDING", VisibleCols=["";"Vector Catch";"Description"], ColWidths=[50;300;500]
+TableHeader="Break & Tracepoints", SortCol="Location", SortOrder="ASCENDING", VisibleCols=["";"Type";"Location";"Extras"], ColWidths=[100;100;138;373]
+WatchedExpression="a", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_LEFT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="hcan1", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="DBUS", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="htim8", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CurrentPeriod", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="circle_number", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_DELIVER", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="refresh_flag", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="stop_flag", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="shoot_nmuber", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="htim3", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="CAN_DATA_RIGHT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="erro", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="PID_LEFT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="RxBuff", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="ringBuff", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="outpost_speed", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="base_speed", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="PID_RIGHT", RefreshRate=5, Window=Watched Data 1
+WatchedExpression="rc_data", Window=Watched Data 1
+WatchedExpression="friction_l", RefreshRate=5, Window=Watched Data 1
