@@ -1,7 +1,7 @@
 #include "bsp_log.h"
 
 #include "SEGGER_RTT.h"
-#include "SEGGER_RTT_Conf.h"
+// #include "SEGGER_RTT_Conf.h"
 #include <stdio.h>
 
 

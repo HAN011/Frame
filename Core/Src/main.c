@@ -27,10 +27,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "usbd_cdc_if.h"
 #include "usb.h"
 #include "daemon.h"
-#include "bsp_usart.h"
 #include "bsp_log.h"
 #include "bsp_dwt.h"
 #include "dji_motor.h"
@@ -42,6 +40,7 @@
 uint8_t *vis_recv_buff;
 int i = 0;
 static DJIMotorInstance *friction_l, *friction_r;
+float b[4] = {0.0, 2.3, 3.4, 4.5};
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -147,7 +146,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    float b[4]={1.2,2.3,3.4,4.5};
+    b[0]+=0.1;
     USB_Data_Send((uint8_t*)b,16);//测试1000hz发送，无意义
     DaemonTask();//守护线程
     // LOGWARNING("[bsp_usart] USART error callback triggered, instance idx [%d]", i);

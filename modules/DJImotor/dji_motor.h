@@ -16,7 +16,7 @@
 #define DJI_MOTOR_H
 
 #include "bsp_can.h"
-#include "controller.h"
+// #include "controller.h"
 #include "motor_def.h"
 #include "stdint.h"
 #include "daemon.h"

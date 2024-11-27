@@ -1,10 +1,7 @@
 #include "bsp_usart.h"
 #include "bsp_log.h"
 #include "stdlib.h"
-#include "memory.h"
 #include "string.h"
-#include "memory.h"
-#include "stdlib.h"
 #include "daemon.h"
 
 /* usart service instance, modules' info would be recoreded here using USARTRegister() */

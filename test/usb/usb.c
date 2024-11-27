@@ -28,13 +28,12 @@
 #include "usb.h"
 #include "crc8.h"
 #include "crc16.h"
-#include "memory.h"
 #include "usbd_cdc_if.h"
 #include "bsp_log.h"
 #include "bsp_dwt.h"
 #include <stdint.h>
 #include <stdio.h>
-
+#include "daemon.h"
 union {
     uint8_t b[4];
     float f;

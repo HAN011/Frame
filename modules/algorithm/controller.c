@@ -9,7 +9,6 @@
  * @copyrightCopyright (c) 2022 HNU YueLu EC all rights reserved
  */
 #include "controller.h"
-#include "memory.h"
 
 /* ----------------------------下面是pid优化环节的实现---------------------------- */
 

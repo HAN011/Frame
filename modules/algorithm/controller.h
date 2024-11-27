@@ -13,12 +13,12 @@
 #ifndef _CONTROLLER_H
 #define _CONTROLLER_H
 
-#include "main.h"
+// #include "main.h"
 #include "stdint.h"
-#include "memory.h"
+// #include "memory.h"
 #include "stdlib.h"
 #include "bsp_dwt.h"
-#include "arm_math.h"
+// #include "arm_math.h"
 #include "user_lib.h"
 #include <math.h>
 

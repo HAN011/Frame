@@ -2,7 +2,6 @@
 #include "general_def.h"
 #include "bsp_dwt.h"
 #include "bsp_log.h"
-// #include "power_calc.h"
 #include <stdint.h>
 
 static uint8_t idx = 0; // register idx,是该文件的全局电机索引,在注册时使用
