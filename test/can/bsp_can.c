@@ -11,7 +11,7 @@
 static CANInstance *can_instance[CAN_MX_REGISTER_CNT] = {NULL};
 static uint8_t idx; // 全局CAN实例索引,每次有新的模块注册会自增
 
-/* ----------------two static function called by CANRegister()-------------------- */
+/* ----------------two static function called by CANRegister ()-------------------- */
 
 /**
  * @brief 添加过滤器以实现对特定id的报文的接收,会被CANRegister()调用
