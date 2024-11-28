@@ -2,7 +2,7 @@
 
 /*
  * static uint8_t sht75_crc_table[];
- *
+ *   
  * The SHT75 humidity sensor is capable of calculating an 8 bit CRC checksum to
  * ensure data integrity. The lookup table crc_table[] is used to recalculate
  * the CRC.
